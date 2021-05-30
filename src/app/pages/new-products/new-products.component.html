@@ -1,0 +1,23 @@
+<div>
+     <form [formGroup]="form" (ngSubmit) = "save()">
+        <h3>Termék hozzáadása</h3>
+          <mat-label>Termék neve : </mat-label>
+          <input placeholder="Adja meg a nevét!" formControlName="name">
+          <mat-label>Leírás</mat-label>
+          <textarea placeholder="Adja meg a termék leírását!" formControlName="description" matInput cdkTextareaAutosize
+          cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+          <label>Termék státusza : </label>
+          <select formControlName= "status">
+            <option value="created">created</option>
+            <option value="pending active">pending active</option>
+            <option value="active">active</option>
+            <option value="aborted">aborted</option>
+            <option value="cancelled">cancelled</option>
+            <option value="terminated">terminated</option>
+            <option value="pending terminate">pending terminate</option>
+            <option value="suspended">suspended</option>
+          </select>
+          <button mat-button type="submit">Felvitel</button>
+        </form>
+</div>
+        
